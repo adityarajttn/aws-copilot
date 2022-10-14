@@ -16,8 +16,7 @@
 `copilot deploy`
 
 ## Create pipeline
-`copilot pipeline init  
- copilot pipeline deploy`
+`copilot pipeline init  copilot pipeline deploy`
 
 ## Delete copilot application
 `copilot app delete --name <APP_NAME>`
