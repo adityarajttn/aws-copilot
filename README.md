@@ -1,43 +1,23 @@
-# docker-2048
+# AWS Copilot
 
-simple is better
+##Install copilot
+`curl -Lo copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux && chmod +x copilot && sudo mv copilot /usr/local/bin/copilot && copilot --help`
 
-a smaller docker version of 2048
+##Initilize copilot application
+`copilot init`
 
-Base on gabrielecirulli/2048(https://github.com/gabrielecirulli/2048)
+## Create environment
+`copilot env init`
 
-Base on alpine
+## Deploy service into envitonment 
+`copilot env deploy --name prod`
 
-Base on nginx
+## Deploy final application
+`copilot deploy`
 
-#dockerfile
+## Create pipeline
+`copilot pipeline init
+ copilot pipeline deploy`
 
-    FROM alpine:latest
-
-    MAINTAINER alex <alexwhen@gmail.com>
-
-    RUN apk --update add nginx
-
-    COPY 2048 /usr/share/nginx/html
-
-    EXPOSE 80
-
-    CMD ["nginx", "-g", "daemon off;"]
-
-# run the docker container with your own build
-
-    git clone https://github.com/alexwhen/docker-2048.git
-    docker build -t "docker-2048" .
-    docker run -d -p 8080:80 docker-2048
-
-# run the docker container by pulling the image directly
-
-    docker run -d -p 8080:80 alexwhen/docker-2048
-
-# Access the game
-
-    http://127.0.0.1:8080
-
-If you run docker with boot2docker on Mac or Windows, the URL should be:
- 
-    http://192.168.59.103:8080
+## Delete copilot application
+`copilot app delete --name <APP_NAME>`
