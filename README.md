@@ -1,9 +1,9 @@
 # AWS Copilot
 
-##Install copilot
+## Install copilot
 `curl -Lo copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux && chmod +x copilot && sudo mv copilot /usr/local/bin/copilot && copilot --help`
 
-##Initilize copilot application
+## Initilize copilot application
 `copilot init`
 
 ## Create environment
@@ -16,7 +16,7 @@
 `copilot deploy`
 
 ## Create pipeline
-`copilot pipeline init
+`copilot pipeline init  
  copilot pipeline deploy`
 
 ## Delete copilot application
